@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BEV Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>🚗 BEV + Risk + Trajectory + Confidence Demo</h1>
+
+    <!-- Upload Section -->
+    <div class="upload-container">
+        <input type="file" id="img1" accept="image/*">
+        <input type="file" id="img2" accept="image/*">
+        <input type="file" id="img3" accept="image/*">
+
+        <label for="destination">Goal Direction:</label>
+        <select id="destination">
+            <option value="forward">Forward</option>
+            <option value="left">Left</option>
+            <option value="right">Right</option>
+        </select>
+
+        <button onclick="uploadImages()">Run Model</button>
+    </div>
+
+    <!-- Input Preview -->
+    <div class="inputs">
+        <div>
+            <h4>Input 1</h4>
+            <img id="preview1" src="" alt="Input 1">
+        </div>
+        <div>
+            <h4>Input 2</h4>
+            <img id="preview2" src="" alt="Input 2">
+        </div>
+        <div>
+            <h4>Input 3</h4>
+            <img id="preview3" src="" alt="Input 3">
+        </div>
+    </div>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">Processing...</div>
+
+    <!-- Results -->
+    <div class="results">
+
+        <div class="card">
+            <h3>BEV (Occupancy Map)</h3>
+            <img id="bevImg" src="">
+        </div>
+
+        <div class="card">
+            <h3>Risk Map</h3>
+            <img id="riskImg" src="">
+        </div>
+
+        <div class="card">
+            <h3>Trajectory (Planned Path)</h3>
+            <img id="trajImg" src="">
+        </div>
+
+        <div class="card">
+            <h3>Confidence Map</h3>
+            <img id="confImg" src="">
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
